@@ -1,7 +1,12 @@
 tal = []
 
 while True :
-    temptal = int(input("Skriv ett positivt tal. Skriv ett negativt tal för att avbryta "))
+    while True :
+        try :
+            temptal = int(input("Skriv ett positivt tal. Skriv ett negativt tal för att avbryta "))
+            break
+        except ValueError:
+            print("fel")
     if temptal >= 0 :
         tal.append(temptal)
     else :
